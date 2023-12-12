@@ -38,9 +38,9 @@ class _LoginWidgetState extends State<LoginWidget> {
   }
 
   void _goToNextPage() {
-    Navigator.of(context)
-        .pushReplacement(FadeRouteBuilder(page: OnboardingView()))
-        .then((_) => setState(() => rect = null));
+    Navigator.of(context).pushReplacement(
+      FadeRouteBuilder(page: OnboardingView()),
+    );
   }
 
   @override

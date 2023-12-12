@@ -5,8 +5,9 @@ class ColorManager {
   static Color white = const Color(0xffffffff);
   static Color error = const Color(0xffe61f34);
   static Color primary = const Color(0xffF9C7DA);
+  static Color darkPrimary = const Color(0xffee5e94);
   static Color lightPrimary = const Color(0xffF9C7DA).withOpacity(0.8);
-  static Color disabled = const Color(0xff707070);
+  static Color disabled = const Color(0xffb0b0b0);
   static Color grey = const Color(0xff737477);
   static Color lightGrey = const Color(0xff9e9e9e);
   static Color darkGrey = const Color(0xff525252);

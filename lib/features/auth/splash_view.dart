@@ -94,8 +94,9 @@ class SplashView extends HookWidget {
     });
     final treesHorizontalMovementStreamController =
         useStreamController<Offset>();
-    final treesHorizontalMovementStream =
-        useStream<Offset>(treesHorizontalMovementStreamController.stream);
+    final treesHorizontalMovementStream = useStream<Offset>(
+      treesHorizontalMovementStreamController.stream,
+    );
     return Scaffold(
       backgroundColor: ColorManager.silverBGColor,
       body: Stack(
