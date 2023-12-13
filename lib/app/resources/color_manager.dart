@@ -6,7 +6,7 @@ class ColorManager {
   static Color error = const Color(0xffe61f34);
   static Color primary = const Color(0xffF9C7DA);
   static Color darkPrimary = const Color(0xffee5e94);
-  static Color lightPrimary = const Color(0xffF9C7DA).withOpacity(0.8);
+  static Color lightPrimary = const Color(0xffF9C7DA).withOpacity(0.6);
   static Color disabled = const Color(0xffb0b0b0);
   static Color grey = const Color(0xff737477);
   static Color lightGrey = const Color(0xff9e9e9e);
@@ -16,6 +16,7 @@ class ColorManager {
   static Color lightPinkColor = const Color(0xffF8C9DB);
   static Color itemBGColor = const Color(0xffFEC9C1);
   static Color textColor = const Color(0xff193566);
+  static Color lightTextColor = const Color(0xff193566).withOpacity(0.8);
   static Color textGreyColor = const Color(0xff707070);
   static Color bottomColor = const Color(0xff3A2755);
   static Color switchColor = const Color(0xffF7CE74);

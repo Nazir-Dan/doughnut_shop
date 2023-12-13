@@ -11,5 +11,11 @@ class ImageAssets {
   static const String topViewDoughnut4 = '$svgImagePath/top-view-doughnut_4.svg';
   static const String topViewDoughnut5 = '$svgImagePath/top-view-doughnut_5.svg';
   static const String topViewDoughnut6 = '$svgImagePath/top-view-doughnut_6.svg';
+  static const String cropedTopViewDoughnut1 = '$svgImagePath/croped_top-view-doughnut_1.svg';
+  static const String cropedTopViewDoughnut2 = '$svgImagePath/croped_top-view-doughnut_2.svg';
+  static const String cropedTopViewDoughnut3 = '$svgImagePath/croped_top-view-doughnut_3.svg';
+  static const String cropedTopViewDoughnut4 = '$svgImagePath/croped_top-view-doughnut_4.svg';
+  static const String cropedTopViewDoughnut5 = '$svgImagePath/croped_top-view-doughnut_5.svg';
+  static const String cropedTopViewDoughnut6 = '$svgImagePath/croped_top-view-doughnut_6.svg';
   static const String trees = '$svgImagePath/trees.svg';
 }

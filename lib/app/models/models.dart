@@ -6,3 +6,21 @@ class SliderObject {
   final String subTitle;
   const SliderObject(this.title, this.subTitle);
 }
+
+@immutable
+class ItemDetailsObject {
+  final String itemName;
+  final String itemDescription;
+  final String itemIngredients;
+  final String itemImagePath;
+  final double itemPrice;
+  final bool isFavorite;
+  const ItemDetailsObject({
+    required this.itemName,
+    required this.itemDescription,
+    required this.itemIngredients,
+    required this.itemImagePath,
+    required this.itemPrice,
+    required this.isFavorite,
+  });
+}

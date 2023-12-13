@@ -300,7 +300,7 @@ class OnboardingView extends HookWidget {
               },
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 72.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.w),
                   child: SingleChildScrollView(
                     child: Column(
                       children: [

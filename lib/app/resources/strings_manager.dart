@@ -2,14 +2,15 @@ class AppStrings {
   //on boarding
   static const noRouteFound = "noRouteFound";
   static const appName = "Doughnut";
-  static const onBoardingTitle1 = "Review donuts categories";
-  static const onBoardingTitle2 = "Choose your favorite ones";
-  static const onBoardingTitle3 = "Add more them";
+  static const onBoardingTitle1 = "Welcome";
+  static const onBoardingTitle2 = "Discover a Sweet Paradise!";
+  static const onBoardingTitle3 = "Let's Dive In!";
   static const onBoardingSubTitle1 =
-      "Select the type you prefer Then start browsing the available items";
-  static const onBoardingSubTitle2 = "Choose it by clicking on it easily";
+      " Indulge in the sweetness of life with our delectable treats. Get ready to explore a world of flavors!";
+  static const onBoardingSubTitle2 =
+      " Browse our menu, customize your order, and savor the joy of every bite. Your doughnut adventure starts here!";
   static const onBoardingSubTitle3 =
-      "You can add more by Choosing available varieties";
+      "Explore the features that make our app unique - easy ordering, exclusive deals, and a sprinkle of delight in every order!";
 
   //authentication
   static const login = "Log in";
@@ -29,12 +30,14 @@ class AppStrings {
   static const applyCoupon = "Apply Coupon";
   static const total = "Total";
   static const tax = "Tax";
-  static const doughnutF1 = "Strawberry cream doughnut";
-  static const doughnutF2 = "Coconut flakes doughnut";
-  static const doughnutF3 = "white chocolate doughnut";
-  static const doughnutF4 = "M&M\'s milk doughnut";
-  static const doughnutF5 = "chocolate doughnut";
-  static const doughnutF6 = "Strawberry cream & sprinkles doughnut";
+  static const doughnutF1 = "Strawberry frosted";
+  static const doughnutF2 = "Coconut flakes";
+  static const doughnutF3 = "white chocolate";
+  static const doughnutF4 = "M&M\'s milk";
+  static const doughnutF5 = "chocolate";
+  static const doughnutF6 = "Strawberry cream & sprinkles";
+  static const doughnutDescription =
+      'These donuts are soft and cakey, but not dry the slightest. The vanilla yogurt keeps them moist. They\'re fun, delicious and they\'re certainly scrumptious';
   static const doughnutIngredients =
       "Ingredients: Flour , Active dry yeast , Butter , Sugar , Salt , Milk , Eggs , Vegetable oil , Strawberry Cream with milk";
 }
