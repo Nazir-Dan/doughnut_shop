@@ -72,37 +72,37 @@ ThemeData getApplicationTheme() {
         color: ColorManager.textColor,
         fontSize: FontSizeManager.s38.sp,
       ),
-       bodyMedium: getSemiBoldStyle(
+      bodyMedium: getSemiBoldStyle(
         color: ColorManager.lightTextColor,
-        fontSize: FontSizeManager.s30.sp,
+        fontSize: FontSizeManager.s30,
       ),
       bodySmall: getLightStyle(
         color: ColorManager.textColor,
-        fontSize: FontSizeManager.s24.sp,
+        fontSize: FontSizeManager.s24,
       ),
       titleLarge: getBoldStyle(
         color: ColorManager.textColor,
-        fontSize: FontSizeManager.s40.sp,
+        fontSize: FontSizeManager.s40,
       ),
       titleMedium: getSemiBoldStyle(
         color: ColorManager.textColor,
-        fontSize: FontSizeManager.s20.sp,
+        fontSize: FontSizeManager.s20,
       ),
       displaySmall: getLightStyle(
         color: ColorManager.textColor,
-        fontSize: FontSizeManager.s17.sp,
+        fontSize: FontSizeManager.s17,
       ),
       labelLarge: getBoldStyle(
         color: ColorManager.textColor,
-        fontSize: FontSizeManager.s24.sp,
+        fontSize: FontSizeManager.s24,
       ),
       labelMedium: getRegularStyle(
         color: ColorManager.textColor,
-        fontSize: FontSizeManager.s18.sp,
+        fontSize: FontSizeManager.s18,
       ),
       labelSmall: getRegularStyle(
         color: ColorManager.textColor,
-        fontSize: FontSizeManager.s12.sp,
+        fontSize: FontSizeManager.s12,
       ),
     ),
 //input decoration theme (text form field)

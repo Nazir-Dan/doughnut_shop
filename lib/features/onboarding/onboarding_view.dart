@@ -3,11 +3,10 @@ import 'dart:math' as math;
 import 'package:doughnut_shop/app/models/models.dart';
 import 'package:doughnut_shop/app/resources/assets_manager.dart';
 import 'package:doughnut_shop/app/resources/color_manager.dart';
-import 'package:doughnut_shop/app/resources/routes_manager.dart';
 import 'package:doughnut_shop/app/resources/strings_manager.dart';
 import 'package:doughnut_shop/app/resources/values_manager.dart';
 import 'package:doughnut_shop/app/shared/fade_out_builder.dart';
-import 'package:doughnut_shop/features/details/details_view.dart';
+import 'package:doughnut_shop/features/main_shop/main_shop_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -355,8 +354,11 @@ class OnboardingView extends HookWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.of(context)
-                        .pushReplacementNamed(Routes.detailsRout);
+                    Navigator.of(context).pushReplacement(
+                      FadeRouteBuilder(
+                        page: const MainShopView(),
+                      ),
+                    );
                   },
                   child: Text(
                     'Skip',
@@ -366,8 +368,11 @@ class OnboardingView extends HookWidget {
                 IconButton(
                   onPressed: currentPageIndex == slides.length - 1
                       ? () {
-                          Navigator.of(context).push(
-                              FadeRouteBuilder(page: const DetailsView()));
+                          Navigator.of(context).pushReplacement(
+                            FadeRouteBuilder(
+                              page: const MainShopView(),
+                            ),
+                          );
                         }
                       : () {
                           _onboardingPageController.nextPage(

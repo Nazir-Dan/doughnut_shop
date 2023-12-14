@@ -7,6 +7,7 @@ import 'package:doughnut_shop/app/resources/color_manager.dart';
 import 'package:doughnut_shop/app/resources/font_manager.dart';
 import 'package:doughnut_shop/app/resources/strings_manager.dart';
 import 'package:doughnut_shop/app/resources/values_manager.dart';
+import 'package:doughnut_shop/app/shared/rect_button.dart';
 import 'package:doughnut_shop/features/details/widgets/custom_switch.dart';
 import 'package:doughnut_shop/features/details/widgets/item_count_widget.dart';
 import 'package:doughnut_shop/features/details/widgets/mini_info_row.dart';
@@ -18,14 +19,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DetailsView extends HookWidget {
-  const DetailsView({super.key});
-  final ItemDetailsObject itemDetails = const ItemDetailsObject(
-      itemName: AppStrings.doughnutF1,
-      itemDescription: AppStrings.doughnutDescription,
-      itemIngredients: AppStrings.doughnutIngredients,
-      itemImagePath: ImageAssets.cropedTopViewDoughnut1,
-      itemPrice: 3.99,
-      isFavorite: false);
+  final ItemDetailsObject itemDetails;
+  const DetailsView({super.key, required this.itemDetails});
+
   @override
   Widget build(BuildContext context) {
     final doughnutAnimationController = useAnimationController(
@@ -79,18 +75,13 @@ class DetailsView extends HookWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: ColorManager.silverBGColor,
-                        borderRadius: BorderRadius.circular(AppSize.s6),
-                      ),
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.arrow_back_ios_new_rounded,
-                            size: AppSize.s18,
-                            color: ColorManager.textColor,
-                          )),
+                    RectButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      icon: Icons.arrow_back_ios_new_outlined,
+                      iconColor: ColorManager.textColor,
+                      backgroundColor: ColorManager.silverBGColor,
                     ),
                     CustomSwitch(
                       onTap: () {
@@ -126,12 +117,37 @@ class DetailsView extends HookWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(height: AppSize.s20.h),
-                        Text(
-                          itemDetails.itemName,
-                          style:
-                              Theme.of(context).textTheme.titleLarge!.copyWith(
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              itemDetails.itemName,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .titleLarge!
+                                  .copyWith(
                                     fontSize: FontSizeManager.s40,
                                   ),
+                            ),
+                            SizedBox(
+                              height: 30.h,
+                              width: 30.w,
+                              child: IconButton(
+                                style: IconButton.styleFrom(
+                                  backgroundColor: ColorManager.lightPrimary,
+                                  padding: EdgeInsets.zero
+                                ),
+                                onPressed: () {},
+                                icon: Icon(
+                                  FontAwesomeIcons.solidHeart,
+                                  color: itemDetails.isFavorite
+                                      ? ColorManager.darkPrimary
+                                      : ColorManager.lightTextColor.withOpacity(0.4),
+                                  size: AppSize.s16,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,

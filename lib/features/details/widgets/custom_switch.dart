@@ -6,7 +6,6 @@ import 'package:doughnut_shop/app/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomSwitch extends HookWidget {
@@ -32,7 +31,7 @@ class CustomSwitch extends HookWidget {
     );
     final switchTransitionAnimation = Tween<double>(
       begin: -1,
-      end: 34,
+      end: 29.w,
     ).animate(
       switchAnimationController,
     );
@@ -70,7 +69,7 @@ class CustomSwitch extends HookWidget {
       child: Stack(
         children: [
           Container(
-            height: 32.h,
+            height: 32,
             width: switchWidth,
             decoration: BoxDecoration(
               color: ColorManager.silverBGColor,
@@ -80,65 +79,68 @@ class CustomSwitch extends HookWidget {
                 width: AppSize.s1_5,
               ),
             ),
-          ),
-          AnimatedBuilder(
-              animation: Listenable.merge([
-                switchRotateAnimation,
-                switchTransitionAnimation,
-                switchIconAnimation,
-                switchColorAnimation
-              ]),
-              builder: (context, child) {
-                return Positioned(
-                  child: Padding(
-                    padding: const EdgeInsets.all(1.0),
-                    child: Transform(
-                      alignment: Alignment.center,
-                      transform: Matrix4.identity()
-                        ..translate(switchTransitionAnimation.value)
-                        ..rotateZ(switchRotateAnimation.value),
-                      child: SizedBox(
-                          height: 30.h,
-                          width: switchButtonWidth,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: ColorManager.primary,
-                              shape: BoxShape.circle,
-                            ),
-                            child: Center(
-                              child: Text(
-                                switchAnimationController.isCompleted
-                                    ? 'L'
-                                    : 'S',
-                                style: GoogleFonts.sourceSans3(
-                                  fontSize: FontSizeManager.s20,
-                                  color: ColorManager.lightTextColor,
-                                ),
-                              ),
-                            ),
-                          )
-                          //  IconButton(
-                          //   style: IconButton.styleFrom(
-                          //       backgroundColor: ColorManager.primary,
-                          //       padding: EdgeInsets.zero),
-                          //   onPressed: () {
-                          //     if (switchAnimationController.isCompleted) {
-                          //       switchAnimationController.reverse();
-                          //     } else {
-                          //       switchAnimationController.forward();
-                          //     }
-                          //   },
-                          //   icon: Icon(
-                          //     FontAwesomeIcons.s,
-                          //     color: ColorManager.textColor,
-                          //     size: AppSize.s12,
-                          //   ),
-                          // ),
-                          ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: AppPadding.p12),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'S',
+                    style: GoogleFonts.sourceSans3(
+                      fontSize: FontSizeManager.s20,
+                      color: ColorManager.lightTextColor.withOpacity(0.3),
                     ),
                   ),
-                );
-              }),
+                  Text(
+                    'L',
+                    style: GoogleFonts.sourceSans3(
+                      fontSize: FontSizeManager.s20,
+                      color: ColorManager.lightTextColor.withOpacity(0.3),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          AnimatedBuilder(
+            animation: Listenable.merge([
+              switchRotateAnimation,
+              switchTransitionAnimation,
+              switchIconAnimation,
+              switchColorAnimation
+            ]),
+            builder: (context, child) {
+              return Positioned(
+                child: Padding(
+                  padding: const EdgeInsets.all(1.0),
+                  child: Transform(
+                    alignment: Alignment.center,
+                    transform: Matrix4.identity()
+                      ..translate(switchTransitionAnimation.value)
+                      ..rotateZ(switchRotateAnimation.value),
+                    child: SizedBox(
+                        height: 30,
+                        width: switchButtonWidth,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: ColorManager.primary,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Center(
+                            child: Text(
+                              switchAnimationController.isCompleted ? 'L' : 'S',
+                              style: GoogleFonts.sourceSans3(
+                                fontSize: FontSizeManager.s20,
+                                color: ColorManager.textColor,
+                              ),
+                            ),
+                          ),
+                        )),
+                  ),
+                ),
+              );
+            },
+          ),
         ],
       ),
     );

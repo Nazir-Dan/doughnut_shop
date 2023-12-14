@@ -24,3 +24,17 @@ class ItemDetailsObject {
     required this.isFavorite,
   });
 }
+
+@immutable
+class CartItemObject {
+  final String itemName;
+  final String itemImagePath;
+  final double itemPrice;
+  final int itemCount;
+  const CartItemObject({
+    required this.itemName,
+    required this.itemImagePath,
+    required this.itemPrice,
+    required this.itemCount,
+  });
+}

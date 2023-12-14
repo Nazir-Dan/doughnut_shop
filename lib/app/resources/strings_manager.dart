@@ -34,8 +34,8 @@ class AppStrings {
   static const doughnutF2 = "Coconut flakes";
   static const doughnutF3 = "white chocolate";
   static const doughnutF4 = "M&M\'s milk";
-  static const doughnutF5 = "chocolate";
-  static const doughnutF6 = "Strawberry cream & sprinkles";
+  static const doughnutF5 = "Strawberry cream & sprinkles";
+  static const doughnutF6 = "chocolate";
   static const doughnutDescription =
       'These donuts are soft and cakey, but not dry the slightest. The vanilla yogurt keeps them moist. They\'re fun, delicious and they\'re certainly scrumptious';
   static const doughnutIngredients =
