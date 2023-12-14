@@ -4,4 +4,4 @@ A fully animated donut shop ui flutter app(UI only).
 - multiple complex animations.
 - utlizes flutter hooks package to use animation controlers and streams without the need of statfull widget.
 # preview
-<img src="preview/preiview.gif" width = 300>
+<img src="preview/preview.gif" width = 300>
